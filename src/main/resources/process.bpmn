@@ -27,7 +27,7 @@
 </bpmn:documentation>
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{not weatherOk}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:serviceTask id="Activity_0hpxa1a" name="Print complaint about weahter" camunda:class="com.camunda.demo.LoggerDelegate">
+    <bpmn:serviceTask id="Activity_0hpxa1a" name="Print complaint about weather" camunda:class="com.camunda.demo.LoggerDelegate">
       <bpmn:incoming>Flow_15me0h4</bpmn:incoming>
       <bpmn:outgoing>Flow_1e2iq19</bpmn:outgoing>
     </bpmn:serviceTask>
