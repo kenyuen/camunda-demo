@@ -10,16 +10,9 @@ const config = { baseUrl: "http://localhost:8080/engine-rest", use: logger };
 const client = new Client(config);
 
 // susbscribe to the topic: 'creditScoreChecker'
-client.subscribe("DecideOnExpansion", async function({ task, taskService }) {
+client.subscribe("InvadeGaul", async function({ task, taskService }) {
   // Put your business logic
-  var north = Math.random() >= 0.5;
-
-  // set a process variable 'winning'
-  const processVariables = new Variables();
-  processVariables.set("north", north);
 
   // complete the task
-  await taskService.complete(task, processVariables);
-}
-
-);
+  await taskService.complete(task);
+});
